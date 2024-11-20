@@ -35,7 +35,6 @@ const App = () => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
             {/* <ScrollView> */}
-            {/* Header Section */}
             <View
                 style={{
                     backgroundColor: "gray",
