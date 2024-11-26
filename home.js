@@ -47,7 +47,7 @@ const App = ({ navigation }) => {
   const initialTime = 24 * 60 * 60 + 59 * 60; // 24 hours, 59 minutes, 0 seconds
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
-
+// test
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     setTimeLeft((prevTime) => {
@@ -74,7 +74,7 @@ const App = ({ navigation }) => {
 
   const { hours, minutes, seconds } = formatTime(timeLeft);
 
-
+vccv
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
       <View style={{ padding: 10, flexDirection: 'row', alignItems: 'center' }}>
