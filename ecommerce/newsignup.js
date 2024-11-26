@@ -13,7 +13,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 // import Icon from 'react-native-vector-icons/Ionicons';
 
 
-const App = () => {
+const App = ({navigation}) => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
@@ -300,7 +300,7 @@ const App = () => {
                         </TouchableOpacity>
                     </View>
                     <View style={{ width: '25%', justifyContent: 'center', alignItems: 'center', borderRadius: 10, backgroundColor: '#FEE8D6', height: 60 }}>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={()=> navigation.navigate ('homescreen')}>
                             <AntDesign name='apple1' size={40} />
                         </TouchableOpacity>
                     </View>

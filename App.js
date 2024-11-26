@@ -47,14 +47,15 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 //navigation screens
 import home from './home';
 import LoginPage from "./loginpage";
-import ui from './android/app/src/ecommerce/ui';
-import ecom from './android/app/src/ecommerce/ecom';
-import otppage from './android/app/src/ecommerce/otppage';
-import mainpage from './android/app/src/ecommerce/mainpage';
-import forgetpass from './android/app/src/ecommerce/forgetpass';
-import myprofile from './android/app/src/ecommerce/myprofile';
-import newsignip from './android/app/src/ecommerce/newsignup';
-
+import ui from './ecommerce/ui';
+import ecom from './ecommerce/ecom';
+import otppage from './ecommerce/otppage';
+import mainpage from './ecommerce/mainpage';
+import forgetpass from './ecommerce/forgetpass';
+import myprofile from './ecommerce/myprofile';
+import newsignip from './ecommerce/newsignup';
+import homescreen from './ecommerce/homescreen';
+import Header from "./ecommerce/header";
 
 
 const Stack = createNativeStackNavigator();
@@ -63,7 +64,8 @@ const Stack = createNativeStackNavigator();
 const App = ()=>{
   return(
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="ecom" screenOptions={{headerShown:false}}>
+      <Stack.Navigator initialRouteName="home" screenOptions={{headerShown:false}}>
+        <Stack.Screen name="header" component={Header}/>
         <Stack.Screen name="ecom" component={ecom}/>
         <Stack.Screen name="ui" component={ui}/>
         <Stack.Screen name='home' component={home}/>
@@ -73,6 +75,7 @@ const App = ()=>{
         <Stack.Screen name="forgetpass" component={forgetpass}/>
         <Stack.Screen name="myprofile" component={myprofile}/>
         <Stack.Screen name="newsignup" component={newsignip}/>
+        <Stack.Screen name='homescreen' component={homescreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   )
